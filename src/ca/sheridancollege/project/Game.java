@@ -12,14 +12,15 @@ import java.util.ArrayList;
  * child of this class and instantiate the methods given.
  * @author dancye, 2018
  */
-public abstract class Game 
+public abstract class Game extends Player 
 {
     private final String gameName;//the title of the game
     private ArrayList <Player> players;// the players of the game
     
-    public Game(String givenName)
+    public Game(String givenName, String name)
     {
-        gameName = givenName;
+        super(name);
+        this.gameName = givenName;
         players = new ArrayList();
     }
 
@@ -58,6 +59,12 @@ public abstract class Game
      * player.
      */
     public abstract void declareWinner();
+
+	/**
+	 * the players of the game
+	 * @param givenName
+	 */
+	
 
    
     
